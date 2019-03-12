@@ -44,6 +44,7 @@ public class Parser {
             INSERT_CLS  = Pattern.compile("(\\S+)\\s+values\\s+(.+?" +
                     "\\s*(?:,\\s*.+?\\s*)*)");
 
+    /** Evaluates the given query string against the given Database instance. */
     public static String eval(Database db, String query) {
         Matcher m;
         if ((m = CREATE_CMD.matcher(query)).matches()) {
